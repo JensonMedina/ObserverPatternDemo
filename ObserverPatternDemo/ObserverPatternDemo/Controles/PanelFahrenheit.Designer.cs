@@ -1,13 +1,13 @@
-﻿namespace ObserverPatternDemo.Controles
+namespace ObserverPatternDemo.Controles
 {
     partial class PanelFahrenheit
     {
-        /// <summary> 
+        /// <summary>
         /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Limpiar los recursos que se estén usando.
         /// </summary>
         /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
@@ -22,48 +22,72 @@
 
         #region Código generado por el Diseñador de componentes
 
-        /// <summary> 
+        /// <summary>
         /// Método necesario para admitir el Diseñador. No se puede modificar
         /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent()
         {
-            lblTemperatura = new Label();
+            layoutContenido = new TableLayoutPanel();
             lblTitulo = new Label();
+            lblTemperatura = new Label();
+            layoutContenido.SuspendLayout();
             SuspendLayout();
-            // 
-            // lblTemperatura
-            // 
-            lblTemperatura.AutoSize = true;
-            lblTemperatura.Location = new Point(44, 93);
-            lblTemperatura.Name = "lblTemperatura";
-            lblTemperatura.Size = new Size(55, 15);
-            lblTemperatura.TabIndex = 3;
-            lblTemperatura.Text = "Sin datos";
-            // 
+            //
+            // layoutContenido
+            //
+            layoutContenido.ColumnCount = 1;
+            layoutContenido.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            layoutContenido.RowCount = 2;
+            layoutContenido.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            layoutContenido.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            layoutContenido.Controls.Add(lblTitulo, 0, 0);
+            layoutContenido.Controls.Add(lblTemperatura, 0, 1);
+            layoutContenido.Dock = DockStyle.Fill;
+            layoutContenido.Margin = new Padding(0);
+            layoutContenido.Name = "layoutContenido";
+            layoutContenido.TabIndex = 0;
+            //
             // lblTitulo
-            // 
+            //
             lblTitulo.AutoSize = true;
-            lblTitulo.Location = new Point(10, 29);
+            lblTitulo.Dock = DockStyle.Fill;
+            lblTitulo.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblTitulo.ForeColor = Color.FromArgb(90, 74, 130);
+            lblTitulo.Margin = new Padding(0, 0, 0, 12);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(132, 15);
-            lblTitulo.TabIndex = 2;
-            lblTitulo.Text = "Temperatura Fahrenheit";
-            // 
+            lblTitulo.Text = "Fahrenheit";
+            lblTitulo.TabIndex = 0;
+            //
+            // lblTemperatura
+            //
+            lblTemperatura.Dock = DockStyle.Fill;
+            lblTemperatura.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
+            lblTemperatura.ForeColor = Color.FromArgb(42, 55, 70);
+            lblTemperatura.Margin = new Padding(0);
+            lblTemperatura.Name = "lblTemperatura";
+            lblTemperatura.TabIndex = 1;
+            lblTemperatura.Text = "Sin datos";
+            lblTemperatura.TextAlign = ContentAlignment.MiddleLeft;
+            //
             // PanelFahrenheit
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            //
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(lblTemperatura);
-            Controls.Add(lblTitulo);
+            BackColor = Color.White;
+            Controls.Add(layoutContenido);
+            Font = new Font("Segoe UI", 10F);
             Name = "PanelFahrenheit";
+            Size = new Size(280, 152);
+            layoutContenido.ResumeLayout(false);
+            layoutContenido.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label lblTemperatura;
+        private TableLayoutPanel layoutContenido;
         private Label lblTitulo;
+        private Label lblTemperatura;
     }
 }
